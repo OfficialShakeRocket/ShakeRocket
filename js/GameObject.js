@@ -1,9 +1,14 @@
 class GameObject {
+    /**
+     * @ param x : number x coord   
+     * @ param y : number y coord 
+     * @ param r : number rotation in radians
+    */
     constructor(x, y, r) {
-        this.sprite = null;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        this.dir = Vector.fromRotation(r);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
     } 
-}
-
-GameObject.prototype.createSprite = function(img) {
-    this.sprite = img;
+    
+    set sprite(img) {
+        this.sprite = img;
+    }
 }

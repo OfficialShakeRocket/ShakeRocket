@@ -7,4 +7,7 @@ class Vector extends Point {
         Math.atan(y/x);
     }
 
+    static fromRotation(theta) {
+        return new Vector(cos(theta), sin(theta));
+    }
 }
